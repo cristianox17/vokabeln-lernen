@@ -22,6 +22,7 @@ const downloadLink = d.getElementById("downloadlink");
 const localstorage = d.getElementById("localstorage");
 const getLocalstorage = d.getElementById("getLocalstorage");
 const deleteLocalstorage = d.getElementById("deleteLocalstorage");
+const presetBtn = d.getElementById("presetBtn");
 let score = d.getElementById("score");
 let scoreCorrect = 0;
 let scoreTotal = 0;
@@ -334,6 +335,22 @@ function myFunction(prop) {
         console.log(vocabulary, "Test123");
     }
     list();
+}
+
+presetBtn?presetBtn.addEventListener("click", loadPreset):""
+function loadPreset(){
+    var xmlhttp = new XMLHttpRequest();
+    var url = "./preset.json";
+
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            vocabulary = JSON.parse(this.responseText);
+            localStorage.setItem("ItemS", JSON.stringify(vocabulary));
+            list();
+        }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
 }
 
 /*deleteLocalstorage.addEventListener("click", removeStorage)

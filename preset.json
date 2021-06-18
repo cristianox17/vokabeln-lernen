@@ -1,0 +1,109 @@
+{
+  "language": "English",
+  "vocabularies": [
+    {
+      "eng": "hello",
+      "de": "Hallo"
+    },
+    {
+      "eng": "Bye",
+      "de": "Tchüss"
+    },
+    {
+      "eng": "Bread",
+      "de": "Brot"
+    },
+    {
+      "eng": "Water",
+      "de": "Wasser"
+    },
+    {
+      "eng": "House",
+      "de": "Haus"
+    },
+    {
+      "eng": "Mouse",
+      "de": "Maus"
+    },
+    {
+      "eng": "Homework",
+      "de": "Hausaufgaben"
+    },
+    {
+      "eng": "We",
+      "de": "Wir"
+    },
+    {
+      "eng": "I",
+      "de": "Ich"
+    },
+    {
+      "eng": "You",
+      "de": "Du"
+    },
+    {
+      "eng": "He",
+      "de": "Er"
+    },
+    {
+      "eng": "She",
+      "de": "Sie"
+    },
+    {
+      "eng": "Time",
+      "de": "Zeit"
+    },
+    {
+      "eng": "People",
+      "de": "Menschen"
+    },
+    {
+      "eng": "but",
+      "de": "aber"
+    },
+    {
+      "eng": "first",
+      "de": "zuerst"
+    },
+    {
+      "eng": "only",
+      "de": "nur"
+    },
+    {
+      "eng": "and",
+      "de": "und"
+    },
+    {
+      "eng": "find",
+      "de": "finden"
+    },
+    {
+      "eng": "new",
+      "de": "neu"
+    },
+    {
+      "eng": "one",
+      "de": "eins"
+    },
+    {
+      "eng": "day",
+      "de": "Tag"
+    },
+    {
+      "eng": "night",
+      "de": "Nacht"
+    },
+    {
+      "eng": "want",
+      "de": "wollen"
+    },
+    {
+      "eng": "will",
+      "de": "werden"
+    },
+    {
+      "eng": "year",
+      "de": "Jahr"
+    }
+  ]
+}

@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
+
+:root {
+    --var-font-big: 30px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+button.hello-button {
+    background-color: #35e03e;
+    transition: background-color .3s;
+}
+
+#button.hello-button:hover {
+    background-color: #0f8b09;
+    cursor: pointer;
+}
+
+.grid-container {
+    padding: 70px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "score timer"
+    "result result"
+    "eng eng"
+    ". ."
+    ". ."
+    "box-1 box-1"
+    "box-2 box-2"
+    "box-3 box-3"
+    ". ."
+    "mode hello-button";
+}
+
+@media only screen and (min-width: 1000px) {
+    .grid-container {
+        padding: 100px 70px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+    ". . . . result result . . score score"
+    "timer . eng eng eng eng eng eng . ."
+    "timer . eng eng eng eng eng eng . ."
+    ". . . . . . . . . ."
+    ". . . . . . . . . ."
+    ". box-1 box-1 . box-2 box-2 . box-3 box-3 ."
+    ". box-1 box-1 . box-2 box-2 . box-3 box-3 ."
+    ". box-1 box-1 . box-2 box-2 . box-3 box-3 ."
+    ". . . . . . . . . ."
+    "mode mode . . . . . . hello-button .";
+    }
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    width: 90vw;
+    grid-template-areas:
+    "deutsch"
+    "deutschinput"
+    "englisch"
+    "englischinput"
+    "localstorage"
+    "add";
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        width: auto;
+        grid-template-areas:
+    "deutsch englisch ."
+    "deutschinput englischinput ."
+    "localstorage add .";
+    }
+}
+
+
+.setting-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.list-container {
+    padding-left: 18px;
+}
+
+.list-container td {
+    padding-right: 10px;
+}
+
+.localstorage {
+    grid-area: localstorage;
+}
+
+.mode {
+    grid-area: mode;
+}
+
+.deutsch {
+    grid-area: deutsch;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.englisch {
+    grid-area: englisch;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.deutschinput {
+    grid-area: deutschinput;
+}
+
+.englischinput {
+    grid-area: englischinput;
+}
+
+.list {
+    grid-area: list;
+}
+
+.add {
+    grid-area: add;
+}
+
+.box {
+    -webkit-box-shadow: 12px 5px 7px 0px rgba(0, 0, 0, 0.48);
+    box-shadow: 12px 5px 7px 0px rgba(0, 0, 0, 0.48);
+    display: flex;
+    background-image: url("karte.jpeg");
+    height: 150px;
+    justify-content: center;
+    font-size: var(--var-font-big);
+    font-family: 'Gochi Hand', cursive;
+    align-items: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 30px;
+    transform: scale(1);
+    transition: transform .3s;
+    color: black;
+}
+
+.settings-icon {
+    fill: #000000;
+}
+
+.settings-icon:hover {
+    animation: rotation 2s linear infinite;
+}
+
+body {
+    background-color: #ffffff;
+    color: #2f2f2f;
+    transition: background-color .3s, color .3s;
+}
+
+body.darkmode {
+    background-color: #2f2f2f;
+    color: #ffffff
+}
+
+.darkmode .settings-icon {
+    fill: #ffffff;
+}
+
+.box:hover {
+    transform: scale(1.05) rotate(0.5deg);
+
+}
+
+.box-3 {
+    grid-area: box-3;
+}
+
+.box-2 {
+    grid-area: box-2;
+}
+
+.box-1 {
+    grid-area: box-1;
+}
+
+.result {
+    grid-area: result;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.score {
+    grid-area: score;
+}
+
+.eng {
+    grid-area: eng;
+}
+
+.hello-button {
+    grid-area: hello-button;
+    padding: 10px 0px;
+}
+
+.link {
+    color: aqua;
+}
+
+.link:hover {
+    animation: color-change 1s linear infinite;
+}
+
+@keyframes color-change {
+    0%, 100% {
+        color: #ff1493;
+    }
+
+    25% {
+        color: #7fff00;
+    }
+
+    50% {
+        color: #0091EA;
+    }
+
+    75% {
+        color: #9400d3;
+    }
+}
+
+.textfeld {
+    display: flex;
+    justify-content: center;
+}
+
+.class {
+    display: flex;
+    justify-content: center;
+}
+
+.jahrgang {
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: 51% 51%;
+    }
+
+    25% {
+        transform: rotate(90deg);
+        transform-origin: 51% 51%;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        transform-origin: 51% 51%;
+    }
+
+    75% {
+        transform: rotate(270deg);
+        transform-origin: 51% 51%;
+    }
+    100% {
+        transform: rotate(360deg);
+        transform-origin: 50% 50%;
+    }
+}
+
+button {
+    display: inline-block;
+    border: none;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    background: #808080;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out,
+    transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 5px;
+}
+
+button:hover,
+button:focus {
+    background: #383737;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+.delete-btn {
+    background: #d51515;
+    padding: 0.5rem 0.5rem;
+}
+
+.delete-btn:hover {
+    background: rgba(137, 0, 0, 0.95);
+}
+
+.englischinput {
+    padding: 4px;
+    font-size: 21px;
+    border-width: 2px;
+    border-color: #cecece;
+    background-color: #ffffff;
+    color: #000000;
+    border-style: solid;
+    border-radius: 13px;
+    box-shadow: 0px 0px 5px rgba(66, 66, 66, .75);
+    text-shadow: 0px 0px 0px rgba(66, 66, 66, .0);
+}
+
+.englischinput:focus {
+    outline: none;
+}
+
+.deutschinput {
+    padding: 4px;
+    font-size: 21px;
+    border-width: 2px;
+    border-color: #cecece;
+    background-color: #ffffff;
+    color: #000000;
+    border-style: solid;
+    border-radius: 13px;
+    box-shadow: 0px 0px 5px rgba(66, 66, 66, .75);
+    text-shadow: 0px 0px 0px rgba(66, 66, 66, .0);
+}
+
+.deutschinput:focus {
+    outline: none;
+}
+
+.select-wrapper {
+    width: 200px;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    width: 100%;
+    height: 40px;
+    -moz-padding-start: calc(10px - 3px);
+    padding-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    outline: none;
+    color: #666;
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    display: none;
+    background-color: transparent;
+}
+
+.select-wrapper {
+    /* ... */
+    position: relative;
+}
+
+.select-wrapper::before {
+    font-family: fontello;
+    content: "\f107";
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #fff;
+    pointer-events: none;
+}

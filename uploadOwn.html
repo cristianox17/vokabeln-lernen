@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Eigene Vokabeln hochladen</title>
+</head>
+<body>
+<h1>Eigene Vokabeln hochladen</h1>
+
+
+<div class="wrapper">
+    <div>
+        <div class="container">
+            <div class="deutsch">Deutsch</div>
+            <input class="deutschinput" id="deutschinput" type="text">
+            <div class="englisch">Englisch</div>
+            <input class="englischinput" id="englischinput" type="text">
+            <button class="add" id="senden">Vokabel hinzufügen</button>
+            <button class="localstorage" id="localstorage">Vokabeln in den Localstorage speichern</button>
+        </div>
+        <input type="file" id="file-selector" accept=".json">
+        <button id="speichern">Speichern</button>
+        <button id="downloadlink"> Download</button>
+
+        <p><a class="link" href=index.html>Zurück</a></p>
+    </div>
+    <div class="list-container">
+        <table class="list" id="vobabularies-list">
+        </table>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
